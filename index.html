@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Meta tags SEO mejorados -->
+  <title>Alberto Rivas | Desarrollador UI & Diseñador Web</title>
+  <meta name="title" content="Alberto Rivas | Desarrollador UI & Diseñador Web">
+  <meta name="description" content="Portfolio de Alberto Rivas, desarrollador de interfaces de usuario y diseñador web freelance especializado en experiencias digitales innovadoras">
+  <meta name="keywords" content="diseño web, UI/UX, desarrollo frontend, inteligencia artificial, diseñador freelance">
+  <meta name="author" content="Alberto Rivas">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tudominio.com/">
+  <meta property="og:title" content="Alberto Rivas | Desarrollador UI & Diseñador Web">
+  <meta property="og:description" content="Portfolio de Alberto Rivas, desarrollador de interfaces de usuario y diseñador web freelance">
+  <meta property="og:image" content="./assets/images/og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://tudominio.com/">
+  <meta property="twitter:title" content="Alberto Rivas | Desarrollador UI & Diseñador Web">
+  <meta property="twitter:description" content="Portfolio de Alberto Rivas, desarrollador de interfaces de usuario y diseñador web freelance">
+  <meta property="twitter:image" content="./assets/images/og-image.jpg">
+
+  <!-- Favicon mejorado con múltiples formatos -->
+  <link rel="shortcut icon" href="./assets/images/favicon1.png" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+  <link rel="manifest" href="./site.webmanifest">
+
+  <!-- Google font optimizado con display=swap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- CSS con precarga -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Preload imágenes críticas -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
+  <link rel="preload" as="image" href="./assets/images/Blog.svg">
+  <!-- Tema oscuro/claro -->
+  <script>
+    // Verificar preferencia guardada para tema oscuro
+    if (localStorage.getItem('theme') === 'dark' || 
+        (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark-theme');
+    }
+  </script>
+</head>
+
+<body>
+  <!-- #HEADER -->
+  <header class="header" data-header>
+    <div class="container">
+      <a href="#" class="logo">
+        
+        <img src="./assets/images/logo-alberto.svg" width="200" height="50" alt="Alberto Rivas" class="logo-light">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="./assets/images/logo-light.svg" width="64" height="24" alt="Alberto Rivas">
+          </a>
+
+          <button class="nav-close-btn" aria-label="cerrar menú" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li>
+            <a href="#home" class="navbar-link">Inicio</a>
+          </li>
+
+          <li>
+            <a href="#about" class="navbar-link">Sobre mí</a>
+          </li>
+
+          <li>
+            <a href="#projects" class="navbar-link">Proyectos</a>
+          </li>
+
+          <li>
+            <a href="#blog" class="navbar-link">Blog</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link">Contacto</a>
+          </li>
+        </ul>
+
+        <div class="wrapper">
+          <a href="mailto:rivasalberto1310@gmail.com" class="contact-link">
+            <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            rivasalberto1310@gmail.com
+          </a>
+
+          <a href="tel:001234567890" class="contact-link">
+            <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+            00 (123) 456 78 90
+          </a>
+        </div>
+
+        <ul class="social-list">
+          <li>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link" aria-label="Dribbble">
+              <ion-icon name="logo-dribbble"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link" aria-label="YouTube">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Botón toggle tema claro/oscuro -->
+        <button class="theme-toggle" aria-label="cambiar tema" data-theme-toggle>
+          <ion-icon name="moon-outline" class="moon-icon" aria-hidden="true"></ion-icon>
+          <ion-icon name="sunny-outline" class="sun-icon" aria-hidden="true"></ion-icon>
+        </button>
+        
+        <button class="nav-open-btn" aria-label="abrir menú" data-nav-toggler>
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!-- #HERO -->
+      <section class="section hero" aria-label="home" id="home">
+        <div class="container">
+          <figure class="hero-banner">
+            <img src="./assets/images/hero11.jpg" width="560" height="540" alt="Alberto Rivas" class="w-100"
+              data-reveal="top">
+
+            <img src="./assets/images/developer.png" width="100" height="50" alt="250+ Proyectos Completados" class="shape"
+              data-reveal="top" data-reveal-delay="0.25s">
+              
+              
+          </figure>
+          
+
+          <div class="hero-content">
+            <h1 class="h1 hero-title" data-reveal="top" data-reveal-delay="0.5s">
+              Desarrollador de interfaces de usuario y diseñador web freelance.
+            </h1>
+            <br>
+
+            <p class="section-text-home" data-reveal="top" data-reveal-delay="0.75s">
+              Soy Alberto, apasionado por la tecnología y el diseño, actualmente explorando el fascinante mundo de la inteligencia artificial.
+            </p>
+            <br>
+
+            <div class="btn-wrapper" data-reveal="top" data-reveal-delay="1s">
+              <a href="https://rivas1310.github.io/cv/" class="btn btn-primary">Descargar CV</a>
+              <a href="https://wa.me/523327432497
+              " class="btn btn-secondary">Contáctame</a>
+            </div>
+            
+            <!-- Añadido: Indicador de scroll -->
+            <div class="scroll-down" data-reveal="top" data-reveal-delay="1.25s">
+              
+              <ion-icon name="chevron-down-outline" aria-hidden="true"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- #TECHNOLOGIES -->
+<section class="section technologies" aria-label="technologies" id="technologies">
+  <div class="container">
+    <h2 class="h2 section-title text-center" data-reveal="top">Tecnologías</h2>
+    
+    <p class="section-text text-center" data-reveal="top" data-reveal-delay="0.25s">
+      Herramientas y lenguajes con los que trabajo
+    </p>
+
+    <ul class="tech-grid">
+      <!-- Aquí puedes insertar tus iconos SVG como elementos de lista -->
+       
+              
+
+      <li data-reveal="bottom" data-reveal-delay="0.1s">
+        <div class="tech-card" data-tilt>
+          <!-- Inserta aquí tu icono SVG -->
+           <img src="./assets/images/logos/html5.svg" width="100" height="50" alt="250+ Proyectos Completados" class="shape"
+              data-reveal="top" data-reveal-delay="0.25s">
+
+          <h3 class="tech-name">HTML</h3>
+        </div>
+      </li>
+      
+      <!-- Ejemplo de estructura para cada tecnología -->
+      <li data-reveal="bottom" data-reveal-delay="0.2s">
+        <div class="tech-card" data-tilt>
+          <!-- Inserta aquí tu icono SVG -->
+          <img src="./assets/images/logos/css_old.svg" width="100" height="50" alt="250+ Proyectos Completados" class="shape"
+          data-reveal="top" data-reveal-delay="0.25s">
+          <h3 class="tech-name">CSS</h3>
+        </div>
+      </li>
+
+      <li data-reveal="bottom" data-reveal-delay="0.2s">
+        <div class="tech-card" data-tilt>
+          <!-- Inserta aquí tu icono SVG -->
+          <img src="./assets/images/logos/javascript.svg" width="100" height="50" alt="250+ Proyectos Completados" class="shape"
+          data-reveal="top" data-reveal-delay="0.25s">
+          <h3 class="tech-name">JS</h3>
+        </div>
+      </li>
+
+      <li data-reveal="bottom" data-reveal-delay="0.2s">
+        <div class="tech-card" data-tilt>
+          <!-- Inserta aquí tu icono SVG -->
+          <img src="./assets/images/logos/tailwindcss.svg" width="100" height="50" alt="250+ Proyectos Completados" class="shape"
+          data-reveal="top" data-reveal-delay="0.25s">
+          <h3 class="tech-name">Tailwind</h3>
+        </div>
+      </li>
+
+      <li data-reveal="bottom" data-reveal-delay="0.2s">
+        <div class="tech-card" data-tilt>
+          <!-- Inserta aquí tu icono SVG -->
+          <img src="./assets/images/logos/nextjs_icon_dark.svg" width="100" height="50" alt="250+ Proyectos Completados" class="shape"
+          data-reveal="top" data-reveal-delay="0.25s">
+          <h3 class="tech-name">NEXT JS</h3>
+        </div>
+      </li>
+
+      <li data-reveal="bottom" data-reveal-delay="0.2s">
+        <div class="tech-card" data-tilt>
+          <!-- Inserta aquí tu icono SVG -->
+          <img src="./assets/images/logos/postgresql.svg" width="100" height="50" alt="250+ Proyectos Completados" class="shape"
+          data-reveal="top" data-reveal-delay="0.25s">
+          <h3 class="tech-name">Postgres</h3>
+        </div>
+      </li>
+
+      <li data-reveal="bottom" data-reveal-delay="0.2s">
+        <div class="tech-card" data-tilt>
+          <!-- Inserta aquí tu icono SVG -->
+          <img src="./assets/images/logos/Prisma_dark.svg" width="100" height="50" alt="250+ Proyectos Completados" class="shape"
+          data-reveal="top" data-reveal-delay="0.25s">
+          <h3 class="tech-name">Prisma</h3>
+        </div>
+      </li>
+
+      <li data-reveal="bottom" data-reveal-delay="0.2s">
+        <div class="tech-card" data-tilt>
+          <!-- Inserta aquí tu icono SVG -->
+          <img src="./assets/images/logos/canva.svg" width="100" height="50" alt="250+ Proyectos Completados" class="shape"
+          data-reveal="top" data-reveal-delay="0.25s">
+          <h3 class="tech-name">Canva</h3>
+        </div>
+      </li>
+
+      
+      
+      <!-- Puedes duplicar este bloque para cada tecnología -->
+    </ul>
+  </div>
+</section>
+
+      <!-- #ABOUT -->
+      <section class="section about" aria-label="about" id="about">
+        <div class="container">
+          <div class="wrapper">
+            <div data-reveal="left">
+              <h2 class="h2 section-title-about">¿Qué hago?</h2>
+
+              <p class="section-text-about">
+                Me dedico a crear interfaces de usuario intuitivas y atractivas, combinando diseño y funcionalidad. Trabajo de forma independiente desarrollando soluciones digitales personalizadas. Mi pasión por la tecnología me ha llevado a explorar el campo de la inteligencia artificial, buscando integrar estas innovaciones en mis diseños para crear experiencias más inteligentes y efectivas.
+              </p>
+            </div>
+
+            <ul class="progress-list" data-reveal="right">
+              <li class="progress-item">
+                <div class="label-wrapper">
+                  <p>Diseño Web</p>
+                  <span class="span">60 %</span>
+                </div>
+
+                <div class="progress">
+                  <div class="progress-fill" style="width: 60%; background-color: #c7b1dd"></div>
+                </div>
+              </li>
+
+              <li class="progress-item">
+                <div class="label-wrapper">
+                  <p>Diseño UI/UX</p>
+                  <span class="span">25 %</span>
+                </div>
+
+                <div class="progress">
+                  <div class="progress-fill" style="width: 25%; background-color: #8caeec"></div>
+                </div>
+              </li>
+
+              <li class="progress-item">
+                <div class="label-wrapper">
+                  <p>Desarrollo Frontend</p>
+                  <span class="span">60 %</span>
+                </div>
+
+                <div class="progress">
+                  <div class="progress-fill" style="width: 60%; background-color: #b0d4c1"></div>
+                </div>
+              </li>
+
+              <li class="progress-item">
+                <div class="label-wrapper">
+                  <p>Inteligencia Artificial</p>
+                  <span class="span">55 %</span>
+                </div>
+
+                <div class="progress">
+                  <div class="progress-fill" style="width: 55%; background-color: #e3a6b6"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <ul class="grid-list">
+            <li data-reveal="bottom">
+              <div class="about-card" data-tilt>
+                <div class="card-icon">
+                  <img src="./assets/images/icon-1.svg" width="52" height="52" loading="lazy" alt="icono diseño web">
+                </div>
+
+                <h3 class="h4 card-title">Diseño Web</h3>
+
+                <p class="card-text">
+                  Creo sitios web modernos, responsivos y atractivos, enfocados en la experiencia del usuario y optimizados para diferentes dispositivos.
+                </p>
+              </div>
+            </li>
+
+            <li data-reveal="bottom" data-reveal-delay="0.25s">
+              <div class="about-card" data-tilt>
+                <div class="card-icon">
+                  <img src="./assets/images/icon-2.svg" width="52" height="52" loading="lazy" alt="icono diseño móvil">
+                </div>
+
+                <h3 class="h4 card-title">Diseño UI/UX</h3>
+
+                <p class="card-text">
+                  Desarrollo interfaces intuitivas y estéticamente agradables que mejoran la experiencia del usuario y facilitan la interacción con el producto.
+                </p>
+              </div>
+            </li>
+
+            <li data-reveal="bottom" data-reveal-delay="0.5s">
+              <div class="about-card" data-tilt>
+                <div class="card-icon">
+                  <img src="./assets/images/icon-3.svg" width="52" height="52" loading="lazy" alt="icono desarrollo web">
+                </div>
+
+                <h3 class="h4 card-title">Desarrollo Frontend</h3>
+
+                <p class="card-text">
+                  Implemento diseños con código limpio y eficiente, utilizando las últimas tecnologías para crear experiencias web dinámicas y funcionales.
+                </p>
+              </div>
+            </li>
+
+            <li data-reveal="bottom" data-reveal-delay="0.75s">
+              <div class="about-card" data-tilt>
+                <div class="card-icon">
+                  <img src="./assets/images/icon-4.svg" width="52" height="52" loading="lazy" alt="icono IA">
+                </div>
+
+                <h3 class="h4 card-title">Integración IA</h3>
+
+                <p class="card-text">
+                  Exploro e implemento soluciones de inteligencia artificial para mejorar la interactividad y funcionalidad de las interfaces digitales.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- #PROJECT -->
+      <section class="section project" aria-labelledby="project-label" id="projects">
+        <div class="container">
+          <div class="title-wrapper" data-reveal="top">
+            <div>
+              <h2 class="h2 section-title-project" id="project-label">Proyectos Realizados</h2>
+
+              <p class="section-text-project">
+                Conoce algunos de mis últimos proyectos con ideas creativas e innovadoras.
+              </p>
+            </div>
+
+            <a href="#" class="btn btn-secondary">Ver todos los Proyectos</a>
+          </div>
+
+          <ul class="grid-list">
+            <li>
+              <div class="project-card project-card-1" style="background-color: #398ffc" data-parallax="0.05">
+                <div class="card-content" data-reveal="left">
+                  <p class="card-tag" style="color: #0f0f0e">Diseño Web</p>
+
+                  <h3 class="h3 card-title">Ecommerce de Dulceria</h3>
+
+                  <p class="card-text">
+                    Tienda en línea con diseño adaptable a cualquier dispositivo, integrando funcionalidades de compra intuitivas y una experiencia de usuario fluida y agradable.
+                  </p>
+
+                  <a href="#" class="btn-text" >
+                    <span class="span"></span>
+                    
+                  </a>
+                </div>
+
+                <figure class="card-banner" data-reveal="right">
+                  <img src="./assets/images/home.jpg" width="650" height="370" loading="lazy" alt="Dashboard UI"
+                    class="w-100">
+                </figure>
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card project-card-2" style="background-color: #398ffc" data-parallax="0.05">
+                <div class="card-content" data-reveal="right">
+                  <p class="card-tag" style="color: #141415">Manejo de Inventario y Productos</p>
+
+                  <h3 class="h3 card-title">Edita tus productos</h3>
+
+                  <p class="card-text">
+                    Manejo de productos para agregar a tienda asi como la opcion para poder desabilitarlos y poder editar y aplicar stock 
+                  </p>
+
+                  <a href="#" class="btn-text" style="color: #3f78e0">
+                    
+                  </a>
+                </div>
+
+                <figure class="card-banner" data-reveal="left">
+                  <img src="./assets/images/admin.jpg" width="600" height="367" loading="lazy" alt="App IA"
+                    class="w-100">
+                </figure>
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card project-card-3" style="background-color: #398ffc" data-parallax="0.05">
+                <div class="card-content" data-reveal="left">
+                  <p class="card-tag" style="color: #0c0c0c">Herramientas Para Control de Ventas</p>
+
+                  <h3 class="h3 card-title">Plataforma de Estadisticas</h3>
+
+                  <p class="card-text">
+                    Interfaz de usuario para de estadisticas para llevar un control de las ventas
+                  </p>
+
+                  <a href="#" class="btn-text" style="color: #7cb798">
+                    
+                  </a>
+                </div>
+
+                <figure class="card-banner" data-reveal="right">
+                  <img src="./assets/images/estadistica1.jpg" width="600" height="367" loading="lazy" alt="Plataforma Educativa"
+                    class="w-100">
+                </figure>
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card project-card-4" style="background-color: #398ffc" data-parallax="0.05">
+                <div class="card-content" data-reveal="left">
+                  <p class="card-tag" style="color: #171617">Facturacion con Api</p>
+
+                  <h3 class="h3 card-title">Facturacion rapida</h3>
+
+                  <p class="card-text">
+                    Facturacion para integrada con API para timbrados mas rapidos
+                  </p>
+
+                  <a href="#" class="btn-text" style="color: #d16b86">
+                    
+                  </a>
+                </div>
+
+                <figure class="card-banner" data-reveal="right">
+                  <img src="./assets/images/facturacion.jpg" width="620" height="370" loading="lazy" alt="E-commerce"
+                    class="w-100">
+                </figure>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- #CONTACT -->
+      
+    </article>
+  </main>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <!-- #FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="copyright">
+          © 2025 Alberto Rivas. Todos los derechos reservados.
+        </p>
+        
+        <!-- Añadido: Enlaces rápidos -->
+        <div class="footer-links">
+          <a href="#home">Inicio</a>
+          <a href="#about">Sobre mí</a>
+          <a href="#projects">Proyectos</a>
+          <a href="#contact">Contacto</a>
+        </div>
+      </div>
+
+      <ul class="social-list">
+        <li>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="social-link" aria-label="Facebook">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="social-link" aria-label="Dribbble">
+            <ion-icon name="logo-dribbble"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+        </li>
+      </ul>
+      
+      <!-- Botón para volver arriba -->
+      <button class="back-to-top" aria-label="Volver arriba" data-back-to-top>
+        <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Scripts con carga optimizada -->
+  <script src="./assets/js/script.js" defer></script>
+  
+  <!-- Opcional: script para efectos tilt en tarjetas -->
+  <script src="https://unpkg.com/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js" defer></script>
+  
+  <!-- Ionicons cargado al final para mejorar rendimiento -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
